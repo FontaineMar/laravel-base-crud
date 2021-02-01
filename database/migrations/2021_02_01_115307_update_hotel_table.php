@@ -21,6 +21,7 @@ class UpdateHotelTable extends Migration
             $table->string('from_date','10');
             $table->string('to_date','10');
             $table->text('more_details');
+            $table->timestamps();
             });
     }
 

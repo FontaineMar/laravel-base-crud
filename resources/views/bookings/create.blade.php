@@ -4,8 +4,8 @@
 <form method="POST" action="{{route('bookings.store')}}">
     @csrf
     <div class="mb-3">
-      <label for="fullName" class="form-label">Nome e Cognome</label>
-      <input type="text" class="form-control" id="fullName" aria-describedby="emailHelp" name="booking_full_name">
+      <label for="name" class="form-label">Nome e Cognome</label>
+      <input type="text" class="form-control" id="name" name="booking_full_name">
     </div>
     <div class="mb-3">
       <label for="numberCard" class="form-label">numero carta</label>
