@@ -21,6 +21,12 @@
                 <td>{{$cliente->from_date}}</td>
                 <td>{{$cliente->to_date}}</td>
                 <td><a href="{{route('bookings.show' , $cliente->id)}}">Dettagli</a></td>
+                <td><a href="{{route('bookings.edit' , $cliente->id)}}">Aggiorna</a></td>
+                <td>
+                  <form action="route('bookings.destroy')">
+                    <button type="submit">X</button>
+                  </form>
+                <td>
             </tr>
             
         @endforeach
