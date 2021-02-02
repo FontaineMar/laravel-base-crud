@@ -23,7 +23,9 @@
                 <td><a href="{{route('bookings.show' , $cliente->id)}}">Dettagli</a></td>
                 <td><a href="{{route('bookings.edit' , $cliente->id)}}">Aggiorna</a></td>
                 <td>
-                  <form action="route('bookings.destroy')">
+                  <form action="{{route('bookings.destroy', $cliente->id)}}" method="POST">
+                    @csrf
+                    @method('DELETE')
                     <button type="submit">X</button>
                   </form>
                 <td>

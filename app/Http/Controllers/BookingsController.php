@@ -127,6 +127,7 @@ class BookingsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        booking::destroy($id);
+        return redirect()->route('bookings.index');
     }
 }

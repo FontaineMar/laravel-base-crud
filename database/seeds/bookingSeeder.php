@@ -1,9 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
-
-use App\Booking;
+use App\booking;
 
 class bookingSeeder extends Seeder
 {
@@ -14,7 +12,9 @@ class bookingSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Booking::class, 200)->create()->each()
+        factory(App\booking::class, 200)->create()->each(function ($el){
+            $el->save();
+        });
         
     }
 }
